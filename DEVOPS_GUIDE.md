@@ -1,16 +1,16 @@
 # Building a Production-Grade CI/CD Infrastructure on AWS
 
-A complete guide to building, deploying, and managing a full-stack application on AWS using Terraform, GitHub Actions, and Docker.
+A practical engineering guide to building, deploying, and managing a full-stack application on AWS with Terraform, GitHub Actions, and Docker.
 
 ---
 
 ## What This Project Solves
 
-Most engineering teams waste hours on manual deployments. A developer finishes a feature, then someone has to SSH into a server, pull the code, restart the app, and hope nothing breaks. That process is slow, error-prone, and impossible to scale.
+As I worked through this project, I wanted to address a fundamental part of application delivery: how to move changes from a development environment into a running application without relying on manual server operations at every stage.
 
-This project eliminates that entirely. A developer pushes code to GitHub. Everything after that — testing, building, packaging, and deploying — happens automatically. The infrastructure itself is also code, meaning you can rebuild your entire AWS environment from scratch in under 30 minutes.
+I designed the deployment workflow around GitHub Actions. A code push triggers the pipeline, which handles testing, building, packaging, and deployment. I also used Terraform to define the AWS infrastructure as code, making it possible to provision the environment consistently rather than configure each resource by hand.
 
-This is the foundation of how serious engineering teams ship software.
+The result is an automated deployment workflow backed by reproducible cloud infrastructure. In this guide, I walk through how I put the system together, the AWS services involved, and the configurations required to reproduce the implementation.
 
 ---
 
